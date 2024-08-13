@@ -1,0 +1,5 @@
+nodule_modules/
+src/
+.env
+tsconfig.json
+rollup.config.js
