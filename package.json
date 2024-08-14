@@ -1,6 +1,6 @@
 {
   "name": "change-env-runtime",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "运行时切换node环境变量的工具",
   "main": "index.ts",
   "scripts": {
