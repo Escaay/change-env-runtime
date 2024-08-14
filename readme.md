@@ -38,3 +38,4 @@ module.exports = {
 ## 2024.8.14
 1. 添加默认模板列表（默认解析全部）
 2. husky+ lint-staged + prettier + eslint 统一代码规则，检验代码正确性
+3. 完善文档
