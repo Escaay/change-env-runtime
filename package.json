@@ -1,11 +1,13 @@
 {
   "name": "change-env-runtime",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "运行时切换node环境变量的工具",
   "main": "index.ts",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
-    "dev": "rollup -c --watch --bundleConfigAsCjs"
+    "dev": "rollup -c --watch --bundleConfigAsCjs",
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
   },
   "author": "escaay",
   "license": "ISC",
@@ -16,7 +18,7 @@
     "ora": "^8.0.1"
   },
   "bin": {
-    "change-env-runtime": "./lib/index.es.js"
+    "cvrt": "./lib/index.es.js"
   },
   "files": [
     "lib"
@@ -26,9 +28,16 @@
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
+    "husky": "^4.3.0",
+    "prettier": "^3.3.3",
     "rollup": "^4.20.0",
     "rollup-plugin-copy": "^3.5.0",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier --write . && git add -A ."
+    }
   }
 }
