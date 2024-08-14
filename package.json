@@ -29,6 +29,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
     "husky": "^4.3.0",
+    "lint-staged": "^15.2.9",
     "prettier": "^3.3.3",
     "rollup": "^4.20.0",
     "rollup-plugin-copy": "^3.5.0",
@@ -37,7 +38,10 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "prettier --write . && git add -A ."
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*": "prettier --write"
   }
 }
