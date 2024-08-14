@@ -3,4 +3,4 @@ enum EnvType {
   Swimlane = 1,
 }
 
-export { EnvType };
+export { EnvType }

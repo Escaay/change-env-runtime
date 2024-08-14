@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5" /* 编译目标 */,
+    "moduleResolution": "node" /* 找不到模块时候设置 */,
+    /* 允许直接导入没有默认导出的模块,import path from 'path'替代import * as path from 'path' */
+    "allowSyntheticDefaultImports": true,
     "module": "esnext" /* 项目模块类型 */,
     "lib": ["ES2018", "DOM"],
     "allowJs": true /* 是否允许js代码 */,
@@ -10,7 +12,9 @@
     "sourceMap": true /* 自动生成sourcemap文件 */,
     "outDir": "lib" /* 编译输出目录 */,
     "rootDir": "./src" /* 项目源码根目录，用来控制编译输出的目录结构 */,
-    "strict": true /* 启用严格模式 */
+    "strict": true /* 启用严格模式 */,
+    "typeRoots": ["node_modules/@types"], // 确保包含类型定义文件的路径
+    "types": ["node", "eslint"] // 指定要包含的类型定义
   },
   "include": ["src/index.ts"],
   "exclude": ["node_modules", "lib"]

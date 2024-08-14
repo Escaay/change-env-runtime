@@ -34,3 +34,4 @@ value: 'VUE_APP_MQTT_SERVER'
 
 2024.8.14
 添加默认模板列表（默认解析全部）
+husky+ lint-staged + prettier + eslint 统一代码规则，检验代码正确性

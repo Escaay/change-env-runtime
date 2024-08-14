@@ -1,16 +1,16 @@
-import resolve from "@rollup/plugin-node-resolve";
-import typescript from "@rollup/plugin-typescript";
-import commonjs from "@rollup/plugin-commonjs";
-import json from "@rollup/plugin-json";
+import resolve from '@rollup/plugin-node-resolve'
+import typescript from '@rollup/plugin-typescript'
+import commonjs from '@rollup/plugin-commonjs'
+import json from '@rollup/plugin-json'
 
 export default [
   {
-    input: "./src/index.ts",
+    input: './src/index.ts',
     output: [
       {
-        dir: "lib",
-        format: "cjs",
-        entryFileNames: "[name].es.js",
+        dir: 'lib',
+        format: 'cjs',
+        entryFileNames: '[name].es.js',
         sourcemap: false, // 是否输出sourcemap
       },
       //   {
@@ -30,12 +30,12 @@ export default [
     ],
     plugins: [
       resolve({
-        exportConditions: ["node"], // add node option here,
+        exportConditions: ['node'], // add node option here,
         preferBuiltins: false,
       }),
       commonjs(),
-      typescript({ module: "ESNext" }),
+      typescript({ module: 'ESNext' }),
       json(),
     ],
   },
-];
+]
