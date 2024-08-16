@@ -50,7 +50,7 @@ const actionChanegEnv = async () => {
   // 根据env文件解析出泳道列表和测试环境列表
   const tmpObj = config.tmpList.find((item) => item.name === envName)
   const activeValueRegExp = new RegExp(`^${tmpObj!.value}(\x20)?=`)
-  const inactiveValueRegExp = new RegExp(`^# ${tmpObj!.value}(\x20)?=`)
+  const inactiveValueRegExp = new RegExp(`^#(\x20)?${tmpObj!.value}(\x20)?=`)
   let defaultValue: string | undefined
   const valueList = envContentArr
     .filter(
@@ -83,7 +83,7 @@ const actionChanegEnv = async () => {
     if (!selectValueMatchRes && activeValueMatchRes) {
       envContentArr[i] = `# ${line}`
     } else if (selectValueMatchRes) {
-      envContentArr[i] = line.replace('# ', '')
+      envContentArr[i] = line.replace(/#(\x20)?/, '')
     }
   }
   fs.writeFileSync(envPath, envContentArr.join('\n'))

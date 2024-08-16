@@ -31,11 +31,12 @@ module.exports = {
 
 # 更新日志
 ## 2024.8.13
-1. 通过降低依赖版本兼容低版本库
-2. esm和cjs都转换为cjs，达到二者混用的效果
-3. 优化正则，匹配多种格式4.增加配置文件change-env.config.js,自由配置解析字段和env文件路径
+1. 增加配置文件change-env.config.js,自由配置解析字段和env文件路径
+2. 优化正则，匹配多种格式
+3. 通过降低依赖版本兼容低版本node
+4. esm和cjs都转换为cjs，达到二者混用的效果
 
 ## 2024.8.14
 1. 添加默认模板列表（默认解析全部）
-2. husky+ lint-staged + prettier + eslint 统一代码规则，检验代码正确性
+2. husky+ lint-staged + prettier + eslint 统一代码风格，检验代码正确性
 3. 完善文档
